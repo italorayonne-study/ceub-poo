@@ -1,4 +1,4 @@
-package br.com.ceub.rayone.Repositories;
+package br.com.ceub.rayone.repositories;
 
 import java.util.ArrayList;
 import java.util.List;

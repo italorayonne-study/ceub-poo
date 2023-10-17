@@ -2,7 +2,7 @@ package br.com.ceub.rayone;
 
 import java.util.Scanner;
 
-import br.com.ceub.rayone.Repositories.DrinkRepository;
+import br.com.ceub.rayone.repositories.DrinkRepository;
 import br.com.ceub.rayone.entities.Drink;
 import br.com.ceub.rayone.helper.Formatter;
 
@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         DrinkRepository repository = new DrinkRepository();
 
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in); 
 
         System.out.println("╔══════════════════════════╗");
         System.out.println("║      Menu de Bebidas     ║");
