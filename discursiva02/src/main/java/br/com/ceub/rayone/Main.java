@@ -1,5 +1,7 @@
 package br.com.ceub.rayone;
 
+import java.lang.reflect.Array;
+
 import br.com.ceub.rayone.entities.Dragon;
 import br.com.ceub.rayone.entities.Elf;
 import br.com.ceub.rayone.entities.Orc;
