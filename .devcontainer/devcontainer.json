@@ -30,7 +30,7 @@
 				"vscjava.vscode-java-pack",
 				"redhat.fabric8-analytics",
 				"redhat.vscode-xml",
-				"mtxr.sqltools"
+				"cweijan.vscode-mysql-client2" // database
 			]
 		}
 	}
