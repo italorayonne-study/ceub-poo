@@ -1,32 +1,33 @@
 package br.com.ceub.rayone.sistematizacao.domain.entities;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
+
 import br.com.ceub.rayone.sistematizacao.domain.enums.UserType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity(name = "users")
-@Table(name = "users")
 @Data
-@Getter
-@Setter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
+
 @EqualsAndHashCode(of = "id")
 
 public class User {
@@ -46,12 +47,15 @@ public class User {
     @Column
     private UserType type;
 
-    @ManyToOne
-    private Pack packages;
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "userId")
+    private List<Pack> packages;
 
+    @JsonFormat(pattern = "dd-MM-yyyy hh:mm:ss a", shape = Shape.STRING)
     @CreationTimestamp
     private LocalDateTime createdAt;
 
     @Column
     private LocalDateTime logicalExclusion;
+
 }

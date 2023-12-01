@@ -15,54 +15,54 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.ceub.rayone.sistematizacao.domain.entities.User;
-import br.com.ceub.rayone.sistematizacao.services.UserService;
+import br.com.ceub.rayone.sistematizacao.domain.entities.Pack;
+import br.com.ceub.rayone.sistematizacao.services.PackService;
+
 
 @RestController
-@RequestMapping("api/v1/user")
-public class UserController {
+@RequestMapping("api/v1/pack")
+public class PackController {
     @Autowired
-    private UserService userService;
+    private PackService packService;
 
     @PostMapping()
-    public ResponseEntity<User> create(@RequestBody User request) {
+    public ResponseEntity<Pack> create(@RequestBody Pack request) {
 
-        this.userService.save(request);
+        this.packService.save(request);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(null);
-
     }
 
     @GetMapping()
-    public ResponseEntity<List<User>> findAll() {
+    public ResponseEntity<List<Pack>> findAll() {
 
-        List<User> users = this.userService.findAll();
+        List<Pack> packs = this.packService.findAll();
 
-        return ResponseEntity.status(HttpStatus.OK).body(users);
+        return ResponseEntity.status(HttpStatus.FOUND).body(packs);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> findById(@PathVariable UUID id) {
+    public ResponseEntity<Pack> findById(@PathVariable UUID id) {
 
-        User user = this.userService.findById(id);
+        Pack pack = this.packService.findById(id);
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(user);
+        return ResponseEntity.status(HttpStatus.FOUND).body(pack);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<String> update(@PathVariable UUID id, @RequestBody User request) {
+    public ResponseEntity<String> updata(@PathVariable UUID id, @RequestBody Pack request) {
 
         request.setId(id);
 
-        this.userService.update(request);
+        this.packService.update(request);
 
         return ResponseEntity.status(HttpStatus.OK).body("Registro atualizado com sucesso");
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> delete(@PathVariable UUID id) {
-
-        this.userService.deleteById(id);
+        
+        this.packService.deleteById(id);
 
         return ResponseEntity.status(HttpStatus.OK).body("Registro excluído com sucesso");
     }

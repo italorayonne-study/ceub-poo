@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  postgres: 
+    image: postgres
+    container_name: postgres-container
+    restart: unless-stopped
+    env_file:
+      - ./.env
+
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+    volumes:
+      - ./data/postgres:/var/lib/postgres/data
+
+    ports:
+      - ${POSTGRES_PORT}:5432
+
+    networks:
+      - app-network
+
+  app:
+    build: ./
+    restart: on-failure
+    env_file:
+      - ./.env
+    ports: 
+      - 80:8080
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: ${APP_DATASOURCE_URL}
+      SPRING_DATASOURCE_USERNAME: ${APP_DATASOURCE_USER}
+      SPRING_DATASOURCE_PASSWORD: ${APP_DATASOURCE_PASS}
+
+networks:
+  app-network:

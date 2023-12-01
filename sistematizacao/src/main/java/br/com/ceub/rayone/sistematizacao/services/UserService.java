@@ -24,12 +24,22 @@ public class UserService implements IUserService {
 
         User user = this.repository.findByDocument(model.getDocument());
 
-        if (user != null) {
+        if (user == null) {
+
+            this.repository.save(model);
+            return;
+        }
+
+        if (user.getLogicalExclusion() != null) {
+
+            model.setId(user.getId());
+
+            this.repository.save(model);
+
+        } else {
             throw new ResponseStatusException(HttpStatus.CONFLICT,
                     "Já existe um registro com os mesmos valores únicos.");
         }
-
-        this.repository.save(user);
     }
 
     @Override
@@ -83,4 +93,5 @@ public class UserService implements IUserService {
 
         return this.repository.save(model);
     }
+
 }

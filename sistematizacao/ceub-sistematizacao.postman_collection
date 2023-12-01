@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "57990862-61b9-4b62-91fb-c23f9f8c3d14",
+		"name": "CEUB - Sistematização",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30344329"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Usuario\",\r\n    \"lastName\": \"Teste 1\",\r\n    \"document\": \"892.989.680-50\",\r\n    \"type\": \"DeliveryMan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Details User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/0b7701e1-ae0e-47c5-b1a8-3535080149f9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"0b7701e1-ae0e-47c5-b1a8-3535080149f9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Updata User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Usuario\",\r\n    \"lastName\": \"Teste 3\",\r\n    \"document\": \"892.989.680-43\",\r\n    \"type\": \"DeliveryMan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/372d75d7-8c88-494e-b7ba-c57044425fab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"372d75d7-8c88-494e-b7ba-c57044425fab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detele User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"ec3677be-7c19-49d2-94f4-f263b687af20\",\r\n        \"firstName\": \"Ângelo\",\r\n        \"lastName\": \"Bernal França\",\r\n        \"document\": \"121.743.544-17\",\r\n        \"type\": \"DeliveryMan\"\r\n\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/user/372d75d7-8c88-494e-b7ba-c57044425fab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"372d75d7-8c88-494e-b7ba-c57044425fab"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pack",
+			"item": [
+				{
+					"name": "Create Pack",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"receiptDate\": \"01-12-2023 10:00:00 AM\",\r\n    \"deliveryDate\": null,\r\n    \"status\": \"PENDENT\",\r\n    \"userId\": \"0b7701e1-ae0e-47c5-b1a8-3535080149f9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pack",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pack"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Packs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pack",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pack"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Details Pack",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pack/5e0703f8-6e23-444a-8162-90437e11ded0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pack",
+								"5e0703f8-6e23-444a-8162-90437e11ded0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Updata Pack",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"receiptDate\": \"01-12-2023 10:00:00 AM\",\r\n    \"deliveryDate\": \"05-12-2023 05:42:53 PM\",\r\n    \"status\": \"SENT\",\r\n    \"tracking\": \"XJ20159794BR\",\r\n    \"userId\": \"0b7701e1-ae0e-47c5-b1a8-3535080149f9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pack/e35831d9-02d2-48aa-af77-96fe7e63209b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pack",
+								"e35831d9-02d2-48aa-af77-96fe7e63209b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detele Pack",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"ec3677be-7c19-49d2-94f4-f263b687af20\",\r\n        \"firstName\": \"Ângelo\",\r\n        \"lastName\": \"Bernal França\",\r\n        \"document\": \"121.743.544-17\",\r\n        \"type\": \"DeliveryMan\"\r\n\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pack/e35831d9-02d2-48aa-af77-96fe7e63209b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pack",
+								"e35831d9-02d2-48aa-af77-96fe7e63209b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
