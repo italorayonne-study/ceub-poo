@@ -12,6 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 import br.com.ceub.rayone.sistematizacao.domain.entities.Pack;
 import br.com.ceub.rayone.sistematizacao.domain.helpers.GeneratePackTrackingCode;
 import br.com.ceub.rayone.sistematizacao.domain.repositories.IPackRepository;
+import br.com.ceub.rayone.sistematizacao.domain.utils.Utils;
 import br.com.ceub.rayone.sistematizacao.services.interfaces.IPackService;
 
 @Service
@@ -53,6 +54,7 @@ public class PackService implements IPackService {
 
     @Override
     public Pack findById(UUID id) {
+
         Pack pack = this.packRepository.findByIdWhereLogicalExclusionEqualsNull(id);
 
         if (pack == null) {
@@ -70,12 +72,15 @@ public class PackService implements IPackService {
 
     @Override
     public Pack update(Pack model) {
+
         Pack pack = this.findById(model.getId());
 
         if (pack == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,
                     "Nenhum pacote encontrado com os critérios de pesquisa fornecidos");
         }
+
+        Utils.copyNonNullProperties(model, pack);
 
         return this.packRepository.save(model);
     }

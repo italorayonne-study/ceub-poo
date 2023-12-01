@@ -34,7 +34,10 @@ services:
     environment:
       SPRING_DATASOURCE_URL: ${APP_DATASOURCE_URL}
       SPRING_DATASOURCE_USERNAME: ${APP_DATASOURCE_USER}
-      SPRING_DATASOURCE_PASSWORD: ${APP_DATASOURCE_PASS}
+      SPRING_DATASOURCE_PASSWORD: ${APP_DATASOURCE_PASSWORD}
+
+    networks:
+     - app-network
 
 networks:
   app-network:

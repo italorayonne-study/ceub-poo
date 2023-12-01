@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.ceub.rayone.sistematizacao.domain.entities.Pack;
 import br.com.ceub.rayone.sistematizacao.services.PackService;
 
-
 @RestController
 @RequestMapping("api/v1/pack")
 public class PackController {
@@ -61,7 +60,7 @@ public class PackController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> delete(@PathVariable UUID id) {
-        
+
         this.packService.deleteById(id);
 
         return ResponseEntity.status(HttpStatus.OK).body("Registro excluído com sucesso");

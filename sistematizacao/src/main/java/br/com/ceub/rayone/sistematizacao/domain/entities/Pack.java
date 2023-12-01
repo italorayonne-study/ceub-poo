@@ -36,7 +36,7 @@ public class Pack {
     private UUID userId;
 
     @JsonFormat(pattern = "dd-MM-yyyy hh:mm:ss a")
-    @Column(nullable = false)
+    @Column
     private LocalDateTime receiptDate; // Quando o pacote chega na empresa
 
     @JsonFormat(pattern = "dd-MM-yyyy hh:mm:ss a", shape = Shape.STRING)
