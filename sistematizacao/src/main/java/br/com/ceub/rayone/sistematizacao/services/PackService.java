@@ -80,7 +80,7 @@ public class PackService implements IPackService {
                     "Nenhum pacote encontrado com os critérios de pesquisa fornecidos");
         }
 
-        Utils.copyNonNullProperties(model, pack);
+        // Utils.copyNonNullProperties(model, pack);
 
         return this.packRepository.save(model);
     }

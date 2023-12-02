@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\": \"Usuario\",\r\n    \"lastName\": \"Teste 1\",\r\n    \"document\": \"892.989.680-50\",\r\n    \"type\": \"DeliveryMan\"\r\n}",
+							"raw": "{\r\n    \"firstName\": \"Usuario\",\r\n    \"lastName\": \"Teste\",\r\n    \"document\": \"892.989.680-51\",\r\n    \"type\": \"DeliveryMan\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24,12 +24,11 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/user",
+							"raw": "http://localhost/api/v1/user",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -45,12 +44,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/user",
+							"raw": "http://localhost/api/v1/user",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -66,17 +64,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/user/0b7701e1-ae0e-47c5-b1a8-3535080149f9",
+							"raw": "http://localhost/api/v1/user/{{user_id}}",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"v1",
 								"user",
-								"0b7701e1-ae0e-47c5-b1a8-3535080149f9"
+								"{{user_id}}"
 							]
 						}
 					},
@@ -89,7 +86,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\": \"Usuario\",\r\n    \"lastName\": \"Teste 3\",\r\n    \"document\": \"892.989.680-43\",\r\n    \"type\": \"DeliveryMan\"\r\n}",
+							"raw": "{\r\n    \"firstName\": \"Usuario\",\r\n    \"lastName\": \"Teste 1\",\r\n    \"document\": \"892.989.680-51\",\r\n    \"type\": \"DeliveryMan\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -97,17 +94,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/user/372d75d7-8c88-494e-b7ba-c57044425fab",
+							"raw": "http://localhost/api/v1/user/{{user_id}}",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"v1",
 								"user",
-								"372d75d7-8c88-494e-b7ba-c57044425fab"
+								"{{user_id}}"
 							]
 						}
 					},
@@ -128,17 +124,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/user/372d75d7-8c88-494e-b7ba-c57044425fab",
+							"raw": "http://localhost/api/v1/user/{{user_id}}",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"v1",
 								"user",
-								"372d75d7-8c88-494e-b7ba-c57044425fab"
+								"{{user_id}}"
 							]
 						}
 					},
@@ -156,7 +151,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"receiptDate\": \"01-12-2023 10:00:00 AM\",\r\n    \"deliveryDate\": null,\r\n    \"status\": \"PENDENT\",\r\n    \"userId\": \"0b7701e1-ae0e-47c5-b1a8-3535080149f9\"\r\n}",
+							"raw": "{\r\n    \"receiptDate\": \"02-12-2023 10:00:00 AM\",\r\n    \"deliveryDate\": null,\r\n    \"status\": \"PENDENT\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -164,12 +159,11 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/pack",
+							"raw": "http://localhost/api/v1/pack",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -185,12 +179,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/pack",
+							"raw": "http://localhost/api/v1/pack",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -206,17 +199,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/pack/5e0703f8-6e23-444a-8162-90437e11ded0",
+							"raw": "http://localhost/api/v1/pack/{{pack_id}}",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"v1",
 								"pack",
-								"5e0703f8-6e23-444a-8162-90437e11ded0"
+								"{{pack_id}}"
 							]
 						}
 					},
@@ -229,7 +221,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"receiptDate\": \"01-12-2023 10:00:00 AM\",\r\n    \"deliveryDate\": \"05-12-2023 05:42:53 PM\",\r\n    \"status\": \"SENT\",\r\n    \"tracking\": \"XJ20159794BR\",\r\n    \"userId\": \"0b7701e1-ae0e-47c5-b1a8-3535080149f9\"\r\n}",
+							"raw": "{\r\n \r\n    \"deliveryDate\": \"05-12-2023 05:42:53 PM\",\r\n    \"status\": \"LATE\",\r\n    \"userId\": \"27575642-35c9-4d6d-8623-c30b1fbfd014\",\r\n    \"tracking\": \"VV77396335BR\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -237,17 +229,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/pack/e35831d9-02d2-48aa-af77-96fe7e63209b",
+							"raw": "http://localhost/api/v1/pack/{{pack_id}}}",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"v1",
 								"pack",
-								"e35831d9-02d2-48aa-af77-96fe7e63209b"
+								"{{pack_id}}}"
 							]
 						}
 					},
@@ -268,23 +259,28 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/pack/e35831d9-02d2-48aa-af77-96fe7e63209b",
+							"raw": "http://localhost/api/v1/pack/{{pack_id}}",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"v1",
 								"pack",
-								"e35831d9-02d2-48aa-af77-96fe7e63209b"
+								"{{pack_id}}"
 							]
 						}
 					},
 					"response": []
 				}
 			]
+		}
+	],
+	"variable": [
+		{
+			"key": "pack_id",
+			"value": "687b5211-3aea-4b93-a4e8-87bef317a382"
 		}
 	]
 }
